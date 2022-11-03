@@ -1,0 +1,18 @@
+1. Zmienna do edycji+metoda do edycji
+2. Przekazywanie metody - komponent edit, jedna wartość, dwie wartości - jak przekazać dwie wartości?
+zadanie: wydzielenie komponentów: do edycji, do dodawania, do usuwania albo w tym przykładzie, albo w projekcie
+3. filtry: wiek, ocena, data urodzenia, imię i nazwisko, wysokość stypendium
+
+zadanie (2p):
+1) zmodyfikować ten projekt wydzielając komponenty: EditStudent, AddStudent, DeleteStudent dodając komunikację pomiędzy nimi a komponentem nadrzędnym oraz określając odpowiednio ich interfejsy. Zastanów się, w którym komponencie należy modyfikowac dane
+2) dodać tablicę przedmiotami oraz z ocenami z tych przedmiotów. Oceny i przedmioty należy wyświetlić jako dane szczegółowe pojawiające się po kliknięciu w przycisk "szczegóły" w pierwszej linii danych studenta
+3) wyświetlić: wysokość stypednium, średnią z ocen w formacie xx.y
+4) stypednium powinno być przydzielane tylko w przypadku, gdy średnia jest wyższa niż 0.8*średnia z ocen wszystkich studentów. Szacowanie stypendium powinno być wykonywane po wciśnięciu w odpowiedni przycisk
+
+
+const objShallowCopy = Object.assign({}, Obj1);
+// or
+const objShallowCopy = {...Obj1};
+
+
+Date.toDateString()  

@@ -1,0 +1,8 @@
+<app-addstudent (EventStudent)="addStudent($event)"></app-addstudent>
+<ol>
+    <li *ngFor="let student of students;odd as isOdd; even as isEven;index as i">
+        <app-viewstudent [isOdd]="isOdd" [studentForPrint]="student" title="{{student.Name.endsWith('a')?'Pani':'Pan'}}"
+            (doEditInParent)="doEdit($event)" [which]="i"></app-viewstudent>
+    </li>
+</ol>
+<app-deletestudent [ListofStudents]="students"></app-deletestudent>

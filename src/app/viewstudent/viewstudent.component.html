@@ -1,0 +1,20 @@
+<span [class.oddRow]="isOdd" [class.evenRow]="!isOdd" (click)="clickOnStudent(studentForPrint.Index_nr)">{{title}}
+    {{studentForPrint.Name}} {{studentForPrint.Surname}} {{studentForPrint.Index_nr}}</span>
+<button (click)="ViewSpec(studentForPrint.Index_nr)">Szczegoly</button>
+<div *ngIf="clicked!=-1">
+    <input type="text" [(ngModel)]="studentForEdit.Name" />
+    <input type="text" [(ngModel)]="studentForEdit.Surname" />
+    <input type="number" [(ngModel)]="studentForEdit.Index_nr" />
+    <span (click)="hide()">hide</span>
+</div>
+<div *ngIf="clicked2!=-1">
+    <ol>
+        <li *ngFor="let ocena of studentForPrint.oceny"> {{ocena.nazwa}} {{ocena.ocena}}
+
+        </li>
+    </ol>
+    <span>Sypedium ={{studentForPrint.stypendium}}<br></span>
+    <span>Srednia ={{studentForPrint.srednia}}<br></span>
+
+    <span (click)="hide2()">Zamknij!</span>
+</div>
